@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# APEX Athletics — Modern Gym & Fitness Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![APEX Athletics Cover](https://via.placeholder.com/1200x600/101015/FF3D26?text=APEX+Athletics+-+Modern+Gym+Platform)
 
-## Available Scripts
+APEX Athletics is a production-ready, highly interactive front-end web application built for a premium fitness center. It features a modern dark-mode aesthetic with glassmorphism UI, advanced Framer Motion animations, dynamic routing, and a custom-built smart AI Chatbot engine.
 
-In the project directory, you can run:
+## 🚀 Key Features
 
-### `npm start`
+- **Immersive UI/UX**: Premium dark-mode design with vibrant gradients, glassmorphism containers, and smooth micro-animations on all interactive elements.
+- **Advanced Animations**: Powered by Framer Motion, featuring scroll-triggered reveal animations, staggered lists, and seamless page transitions.
+- **Smart Chatbot Assistant**: A custom-built, client-side intent-matching engine (Fuzzy Logic) that answers 50+ gym-related questions instantly, with an AI (Google Gemini 3.6 Flash) fallback for unhandled queries.
+- **Performance Optimized**: Built with route-level code splitting (`React.lazy` & `Suspense`), ensuring fast initial load times.
+- **Mobile Responsive**: Fully responsive grid layouts and a custom mobile navigation drawer.
+- **Production Grade**: Includes custom Error Boundaries, a branded 404 Not Found page, and strict accessibility standards.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Framework**: React.js 18
+- **Routing**: React Router v7 (Dynamic parameters, nested routes, hash-scrolling)
+- **Styling**: Tailwind CSS (Custom configured design system with primary/accent tokens)
+- **Animations**: Framer Motion
+- **AI Integration**: Google Gemini API (v1beta REST API)
+- **Data Layer**: Modular static data structures (No DB required)
 
-### `npm test`
+## 📦 Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
+- Node.js (v16+)
+- A Google Gemini API Key (Optional, for chatbot fallback)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/apex-athletics.git
+   cd apex-athletics
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Configure Environment Variables:
+   Create a `.env` file in the root directory and add:
+   ```env
+   REACT_APP_GEMINI_API_KEY=your_api_key_here
+   ```
 
-### `npm run eject`
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📂 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+\`\`\`text
+src/
+├── components/      # Reusable UI components (Header, Footer, Chatbot, Testimonials)
+├── pages/           # Route-level components (Home, Contact, ProgramDetails, Coaches)
+├── data/            # Static data stores & Smart Chatbot Engine
+├── assets/          # Images, SVGs, and global styles
+└── App.js           # Main router and global wrapper
+\`\`\`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧠 Chatbot Architecture
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The APEX Assistant is a hybrid chatbot designed for **speed** and **reliability**:
+1. **Local Intent Engine**: Parses user input against a local Knowledge Base (50+ intents) using word-boundary RegEx and length-based keyword scoring. Responses are instantaneous and formatted in Markdown.
+2. **Gemini AI Fallback**: If the query scores 0, it calls the Google Gemini API to generate a context-aware response based on a strictly formatted system prompt.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+This project is open-source and available under the MIT License.

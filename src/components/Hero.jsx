@@ -1,88 +1,236 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Header from "./Header";
 import hero from "../assets/hero_image.png";
-import hero_back from "../assets/hero_image_back.png";
 import heart from "../assets/heart.png";
 import calories from "../assets/calories.png";
 
-const Hero = () => {
-  return (
-    <div className="flex justify-between text-white">
-      <div className="left-side px-10 pb-10">
-        <Header />
-        {/* the best ... */}
-        <div className="mt-16 rounded-[4rem] w-fit py-5 px-3 bg-[#363d42] uppercase relative flex items-center justify-start mb-10">
-          <div className="absolute bg-orange w-[92px] h-4/5 rounded-[3rem] best"></div>
-          <span className="z-20 px-3 ">the best fitness club in the town</span>
-        </div>
-        {/* heading  */}
-        <div className="flex flex-col gap-6 uppercase font-bold text-7xl ">
-          <div>
-            <span className="stroke-text ">shape </span>
-            <span>your</span>
-          </div>
-          <div>
-            <span>ideal body</span>
-          </div>
-          <div className="lowercase text-base font-normal w-4/5 tracking-wider">
-            <span>
-              In here we will help you to shape and build your ideal body and
-              live up your life to fullest
-            </span>
-          </div>
-        </div>
-        {/* figures */}
-        <div className="flex gap-8 mt-10">
-          <div className="flex flex-col">
-            <span className="text-3xl">+140</span>
-            <span className="uppercase text-lg text-gray">expert coaches</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-3xl">+978</span>
-            <span className="uppercase text-lg text-gray">members joined</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-3xl">+50</span>
-            <span className="uppercase text-lg text-gray">fitness program</span>
-          </div>
-        </div>
-        {/* buttons */}
-        <div className="flex gap-5 mt-6">
-          <button className="bg-orange px-6 py-2 text-sm font-bold">
-            Get Started
-          </button>
-          <button className="border-2 border-orange px-6 py-2 text-sm font-bold">
-            Learn More
-          </button>
-        </div>
-      </div>
-      <div className="right-side pt-8 bg-orange w-1/4">
-        <button className="bg-white text-black px-3 py-3 font-bold text-sm relative left-44 rounded-md">
-          Join now
-        </button>
-        <div className="bg-darkGrey py-4 px-3 flex flex-col gap-3 mt-9 w-[39%] rounded-md relative left-32">
-          <img src={heart} className="w-8" />
-          <div className="text-gray">Heart rate</div>
-          <div className="text-2xl">116 bpm</div>
-        </div>
-        {/* hero images */}
-        <img src={hero} alt="" className="absolute w-96 top-40 right-32" />
-        <img
-          src={hero_back}
-          alt=""
-          className="absolute w-64 top-20 right-80 -z-10"
-        />
-        {/* calories */}
-        <div className="bg-caloryCard absolute flex space-between  gap-7 p-4  rounded-lg w-44 h-36 top-[530px] right-[470px]">
-          <img src={calories} alt="" className="w-12" />
-          <div className="flex flex-col ">
-            <div className="text-gray">Calories burned</div>
-            <div className="text-3xl ">220 kcal</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+const stats = [
+  { value: "140+", label: "Expert Coaches" },
+  { value: "978+", label: "Members Joined" },
+  { value: "50+", label: "Fitness Programs" },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15, delayChildren: 0.3 },
+  },
 };
 
-export default Hero;
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const scrollTo = (id) => {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
+
+export default function Hero() {
+  return (
+    <section
+      id="hero"
+      className="relative min-h-screen overflow-hidden bg-surface-950"
+    >
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="glow-orb w-[600px] h-[600px] bg-primary-500 top-[-200px] right-[-100px]" />
+        <div className="glow-orb w-[400px] h-[400px] bg-accent-500 bottom-[-100px] left-[-100px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,61,38,0.08)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(255,123,17,0.05)_0%,_transparent_60%)]" />
+        {/* Grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
+        />
+      </div>
+
+      <Header />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col lg:flex-row items-center gap-12 min-h-screen">
+        {/* Left Content */}
+        <motion.div
+          className="flex-1 flex flex-col gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* Badge */}
+          <motion.div variants={itemVariants}>
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
+              <div className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary-500" />
+              </div>
+              <span className="text-sm font-medium text-surface-300 tracking-wide">
+                The #1 Fitness Destination in Town
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Headline */}
+          <motion.div variants={itemVariants}>
+            <h1 className="font-heading font-900 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
+              <span className="block text-white">Unleash</span>
+              <span className="block gradient-text">Your Peak</span>
+              <span className="block text-white">Potential</span>
+            </h1>
+          </motion.div>
+
+          {/* Subtext */}
+          <motion.p
+            variants={itemVariants}
+            className="text-lg text-surface-400 max-w-lg leading-relaxed"
+          >
+            Transform your body and mind with world-class coaches, cutting-edge
+            equipment, and programs designed to push you beyond every limit.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+            <button
+              onClick={() => scrollTo("plans")}
+              className="btn-primary inline-flex items-center gap-2"
+            >
+              <span>Start Your Journey</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13 7l5 5m0 0l-5 5m5-5H6"
+                />
+              </svg>
+            </button>
+            <button
+              onClick={() => scrollTo("programs")}
+              className="btn-outline inline-flex items-center gap-2"
+            >
+              <span>Explore Programs</span>
+            </button>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            variants={itemVariants}
+            className="flex gap-8 sm:gap-12 pt-4 border-t border-white/10 mt-4"
+          >
+            {stats.map((stat, i) => (
+              <div key={i} className="flex flex-col">
+                <span className="text-2xl sm:text-3xl font-heading font-bold text-white">
+                  {stat.value}
+                </span>
+                <span className="text-xs sm:text-sm text-surface-400 uppercase tracking-wider mt-1">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* Right - Hero Image + floating cards */}
+        <motion.div
+          className="flex-1 relative flex items-center justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        >
+          {/* Glow behind image */}
+          <div className="absolute w-80 h-80 bg-primary-500/20 rounded-full blur-[100px]" />
+
+          {/* Hero Image */}
+          <div className="relative">
+            <img
+              src={hero}
+              alt="Athlete performing exercise at APEX Athletics"
+              className="relative z-10 w-72 sm:w-80 lg:w-96 drop-shadow-2xl"
+            />
+
+            {/* Heart Rate Card */}
+            <motion.div
+              className="absolute -left-6 top-1/4 z-20 glass-card rounded-2xl p-4 flex flex-col gap-2"
+              animate={{ y: [0, -10, 0] }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <img src={heart} className="w-8 h-8" alt="Heart rate icon" />
+              <div className="text-xs text-surface-400">Heart Rate</div>
+              <div className="text-xl font-bold font-heading text-white">
+                116{" "}
+                <span className="text-xs text-primary-400 font-normal">
+                  bpm
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Calories Card */}
+            <motion.div
+              className="absolute -right-4 bottom-1/4 z-20 glass-card rounded-2xl p-4 flex items-center gap-3"
+              animate={{ y: [0, 10, 0] }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
+            >
+              <img src={calories} className="w-10 h-14" alt="Calories icon" />
+              <div className="flex flex-col">
+                <div className="text-xs text-surface-400">Calories Burned</div>
+                <div className="text-xl font-bold font-heading text-white">
+                  220{" "}
+                  <span className="text-xs text-accent-400 font-normal">
+                    kcal
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5 }}
+      >
+        <span className="text-xs text-surface-500 tracking-widest uppercase">
+          Scroll
+        </span>
+        <motion.div
+          className="w-5 h-8 rounded-full border-2 border-surface-600 flex justify-center pt-1.5"
+          animate={{ opacity: [1, 0.3, 1] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <motion.div
+            className="w-1 h-2 rounded-full bg-primary-500"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
