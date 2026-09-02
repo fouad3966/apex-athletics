@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Header from "./Header";
-import hero from "../assets/hero_image.png";
+const heroImage = "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&h=1000&fit=crop";
 import heart from "../assets/heart.png";
 import calories from "../assets/calories.png";
 
@@ -158,9 +158,9 @@ export default function Hero() {
           {/* Hero Image */}
           <div className="relative">
             <img
-              src={hero}
+              src={heroImage}
               alt="Athlete performing exercise at APEX Athletics"
-              className="relative z-10 w-72 sm:w-80 lg:w-96 drop-shadow-2xl"
+              className="relative z-10 w-72 sm:w-80 lg:w-96 h-[360px] sm:h-[400px] lg:h-[480px] object-cover rounded-3xl ring-1 ring-white/10 drop-shadow-2xl"
             />
 
             {/* Heart Rate Card */}
