@@ -55,10 +55,10 @@ export default function WhyUs() {
       <div className="glow-orb w-[500px] h-[500px] bg-primary-500 bottom-[-200px] right-[-200px]" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-16 items-center">
           {/* Image Grid */}
           <AnimatedSection variant="fadeRight" className="flex-1">
-            <div className="grid grid-cols-10 grid-rows-5 gap-3 h-[500px]">
+            <div className="grid grid-cols-10 grid-rows-5 gap-2 sm:gap-3 h-[300px] sm:h-[400px] lg:h-[500px]">
               <div className="col-span-3 row-span-5 rounded-2xl overflow-hidden group">
                 <img
                   src={image1}

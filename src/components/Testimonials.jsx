@@ -169,12 +169,12 @@ export default function Testimonials() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 opacity-90" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.1)_0%,_transparent_60%)]" />
 
-            <div className="relative z-10 px-8 py-16 sm:px-16 flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div className="relative z-10 px-6 py-10 sm:px-16 sm:py-16 flex flex-col sm:flex-row items-center justify-between gap-8">
               <div>
-                <h2 className="font-heading font-800 text-3xl sm:text-4xl text-white mb-3">
+                <h2 className="font-heading font-800 text-2xl sm:text-4xl text-white mb-3 text-center sm:text-left">
                   Ready to Level Up Your Body?
                 </h2>
-                <p className="text-white/70 text-lg max-w-lg">
+                <p className="text-white/70 text-base sm:text-lg max-w-lg text-center sm:text-left">
                   Join thousands of members who transformed their lives. Your
                   journey starts today.
                 </p>
@@ -204,7 +204,7 @@ export default function Testimonials() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                     aria-label="Email address for newsletter"
-                    className="px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300 min-w-[260px] backdrop-blur-sm"
+                    className="px-6 py-3 sm:py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all duration-300 w-full sm:min-w-[260px] backdrop-blur-sm text-sm sm:text-base"
                   />
                   <button
                     type="submit"

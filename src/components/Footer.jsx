@@ -75,10 +75,10 @@ export default function Footer() {
 
   return (
     <footer className="relative border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-12">
           {/* Brand Column */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 lg:col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6 group">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
                 <svg

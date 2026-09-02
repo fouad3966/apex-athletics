@@ -89,7 +89,7 @@ export default function DiscoverSection() {
             <AnimatedSection key={i} variant="fadeUp" delay={i * 0.1}>
               <Link to={page.to} className="block group">
                 <motion.div
-                  className="relative rounded-3xl overflow-hidden h-72 sm:h-80 flex items-end"
+                  className="relative rounded-3xl overflow-hidden h-60 sm:h-80 flex items-end"
                   whileHover={{ y: -6, transition: { duration: 0.3 } }}
                 >
                   {/* Background Image */}

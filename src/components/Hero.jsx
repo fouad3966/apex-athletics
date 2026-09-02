@@ -59,10 +59,10 @@ export default function Hero() {
 
       <Header />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 flex flex-col lg:flex-row items-center gap-12 min-h-screen">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-16 sm:pb-20 flex flex-col lg:flex-row items-center gap-8 lg:gap-12 min-h-screen">
         {/* Left Content */}
         <motion.div
-          className="flex-1 flex flex-col gap-8"
+          className="flex-1 flex flex-col gap-6 sm:gap-8 text-center lg:text-left items-center lg:items-start"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -82,7 +82,7 @@ export default function Hero() {
 
           {/* Headline */}
           <motion.div variants={itemVariants}>
-            <h1 className="font-heading font-900 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
+            <h1 className="font-heading font-900 text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight">
               <span className="block text-white">Unleash</span>
               <span className="block gradient-text">Your Peak</span>
               <span className="block text-white">Potential</span>
@@ -92,14 +92,14 @@ export default function Hero() {
           {/* Subtext */}
           <motion.p
             variants={itemVariants}
-            className="text-lg text-surface-400 max-w-lg leading-relaxed"
+            className="text-base sm:text-lg text-surface-400 max-w-lg leading-relaxed"
           >
             Transform your body and mind with world-class coaches, cutting-edge
             equipment, and programs designed to push you beyond every limit.
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+          <motion.div variants={itemVariants} className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
             <button
               onClick={() => scrollTo("plans")}
               className="btn-primary inline-flex items-center gap-2"
@@ -130,11 +130,11 @@ export default function Hero() {
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            className="flex gap-8 sm:gap-12 pt-4 border-t border-white/10 mt-4"
+            className="flex justify-center lg:justify-start gap-6 sm:gap-12 pt-4 border-t border-white/10 mt-4 w-full"
           >
             {stats.map((stat, i) => (
               <div key={i} className="flex flex-col">
-                <span className="text-2xl sm:text-3xl font-heading font-bold text-white">
+                <span className="text-xl sm:text-3xl font-heading font-bold text-white">
                   {stat.value}
                 </span>
                 <span className="text-xs sm:text-sm text-surface-400 uppercase tracking-wider mt-1">
