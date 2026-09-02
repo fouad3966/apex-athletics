@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import AnimatedSection from "../components/AnimatedSection";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import image1 from "../assets/image1.png";
-import image2 from "../assets/image2.png";
-import image3 from "../assets/image3.png";
+import { gymImages } from "../data/imageLibrary";
 
 const values = [
   {
@@ -59,18 +57,18 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero */}
-      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+      <section className="relative pt-28 sm:pt-32 pb-16 sm:pb-20 px-4 sm:px-6 overflow-hidden">
         <div className="glow-orb w-[600px] h-[600px] bg-primary-500 top-[-200px] right-[-200px]" />
         <div className="max-w-7xl mx-auto relative z-10">
           <AnimatedSection>
             <span className="inline-block text-sm font-semibold text-primary-400 uppercase tracking-[0.2em] mb-4">
               About Us
             </span>
-            <h1 className="font-heading font-900 text-5xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6">
+            <h1 className="font-heading font-900 text-4xl sm:text-6xl lg:text-7xl leading-[0.95] mb-6">
               <span className="text-white">We Are </span>
               <span className="gradient-text">APEX</span>
             </h1>
-            <p className="text-lg text-surface-400 max-w-2xl leading-relaxed">
+            <p className="text-base sm:text-lg text-surface-400 max-w-2xl leading-relaxed">
               More than a gym — we're a movement. Founded on the belief that
               everyone has untapped potential, APEX Athletics brings together
               elite coaching, cutting-edge facilities, and an unshakeable
@@ -81,14 +79,14 @@ export default function AboutPage() {
       </section>
 
       {/* Image + Story */}
-      <section className="px-6 pb-20">
+      <section className="px-4 sm:px-6 pb-16 sm:pb-20">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
             <AnimatedSection variant="fadeRight" className="flex-1">
               <div className="grid grid-cols-2 gap-4">
-                <img src={image1} alt="Training at APEX" className="rounded-2xl h-64 w-full object-cover" />
-                <img src={image2} alt="Community at APEX" className="rounded-2xl h-64 w-full object-cover mt-8" />
-                <img src={image3} alt="Coaching at APEX" className="rounded-2xl h-64 w-full object-cover col-span-2" />
+                <img src={gymImages.aboutUs} alt="Training at APEX" className="rounded-2xl h-48 sm:h-64 w-full object-cover" />
+                <img src={gymImages.groupWorkout} alt="Community at APEX" className="rounded-2xl h-48 sm:h-64 w-full object-cover mt-8" />
+                <img src={gymImages.ourCoaches} alt="Coaching at APEX" className="rounded-2xl h-48 sm:h-64 w-full object-cover col-span-2" />
               </div>
             </AnimatedSection>
             <AnimatedSection variant="fadeLeft" className="flex-1 flex flex-col gap-6">

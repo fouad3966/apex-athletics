@@ -1,9 +1,7 @@
 import React from "react";
 import AnimatedSection from "./AnimatedSection";
-import image1 from "../assets/image1.png";
-import image2 from "../assets/image2.png";
-import image3 from "../assets/image3.png";
-import image4 from "../assets/image4.png";
+import { gymImages } from "../data/imageLibrary";
+
 import nike from "../assets/nike.png";
 import adidas from "../assets/adidas.png";
 import newBalence from "../assets/nb.png";
@@ -61,28 +59,28 @@ export default function WhyUs() {
             <div className="grid grid-cols-10 grid-rows-5 gap-2 sm:gap-3 h-[300px] sm:h-[400px] lg:h-[500px]">
               <div className="col-span-3 row-span-5 rounded-2xl overflow-hidden group">
                 <img
-                  src={image1}
+                  src={gymImages.strengthTraining}
                   alt="Strength training at APEX Athletics"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="col-span-7 row-span-3 rounded-2xl overflow-hidden group">
                 <img
-                  src={image2}
+                  src={gymImages.groupWorkout}
                   alt="Group workout session"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="col-span-4 row-span-2 rounded-2xl overflow-hidden group">
                 <img
-                  src={image3}
+                  src={gymImages.personalTraining}
                   alt="Personal training session"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
               <div className="col-span-3 row-span-2 rounded-2xl overflow-hidden group">
                 <img
-                  src={image4}
+                  src={gymImages.modernEquipment}
                   alt="Modern gym equipment"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
