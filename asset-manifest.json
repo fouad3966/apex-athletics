@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/apex-athletics/static/css/main.c9cad203.css",
-    "main.js": "/apex-athletics/static/js/main.d3f2d200.js",
+    "main.js": "/apex-athletics/static/js/main.5e00d7ae.js",
     "static/js/902.81893d55.chunk.js": "/apex-athletics/static/js/902.81893d55.chunk.js",
     "static/js/448.b1d86e21.chunk.js": "/apex-athletics/static/js/448.b1d86e21.chunk.js",
     "static/js/241.ac5f1cc2.chunk.js": "/apex-athletics/static/js/241.ac5f1cc2.chunk.js",
@@ -20,7 +20,7 @@
     "static/media/t-image2.jpg": "/apex-athletics/static/media/t-image2.f5d2e52e514c544dfffb.jpg",
     "index.html": "/apex-athletics/index.html",
     "main.c9cad203.css.map": "/apex-athletics/static/css/main.c9cad203.css.map",
-    "main.d3f2d200.js.map": "/apex-athletics/static/js/main.d3f2d200.js.map",
+    "main.5e00d7ae.js.map": "/apex-athletics/static/js/main.5e00d7ae.js.map",
     "902.81893d55.chunk.js.map": "/apex-athletics/static/js/902.81893d55.chunk.js.map",
     "448.b1d86e21.chunk.js.map": "/apex-athletics/static/js/448.b1d86e21.chunk.js.map",
     "241.ac5f1cc2.chunk.js.map": "/apex-athletics/static/js/241.ac5f1cc2.chunk.js.map",
@@ -32,6 +32,6 @@
   },
   "entrypoints": [
     "static/css/main.c9cad203.css",
-    "static/js/main.d3f2d200.js"
+    "static/js/main.5e00d7ae.js"
   ]
 }
