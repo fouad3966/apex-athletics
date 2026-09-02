@@ -154,7 +154,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <ErrorBoundary>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
         <div className="noise-overlay" />
         <div className="App">
