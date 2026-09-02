@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/apex-athletics/static/css/main.090d976e.css",
-    "main.js": "/apex-athletics/static/js/main.cc2912f5.js",
-    "static/js/902.81893d55.chunk.js": "/apex-athletics/static/js/902.81893d55.chunk.js",
-    "static/js/448.b1d86e21.chunk.js": "/apex-athletics/static/js/448.b1d86e21.chunk.js",
+    "main.css": "/apex-athletics/static/css/main.c192ffef.css",
+    "main.js": "/apex-athletics/static/js/main.5f68caa7.js",
+    "static/js/902.b67f9654.chunk.js": "/apex-athletics/static/js/902.b67f9654.chunk.js",
+    "static/js/448.a1a5e511.chunk.js": "/apex-athletics/static/js/448.a1a5e511.chunk.js",
     "static/js/241.ac5f1cc2.chunk.js": "/apex-athletics/static/js/241.ac5f1cc2.chunk.js",
     "static/js/660.440600b0.chunk.js": "/apex-athletics/static/js/660.440600b0.chunk.js",
     "static/js/212.1f923042.chunk.js": "/apex-athletics/static/js/212.1f923042.chunk.js",
@@ -11,18 +11,11 @@
     "static/js/463.efd81ec9.chunk.js": "/apex-athletics/static/js/463.efd81ec9.chunk.js",
     "static/js/520.0bbb41be.chunk.js": "/apex-athletics/static/js/520.0bbb41be.chunk.js",
     "static/media/hero_image.png": "/apex-athletics/static/media/hero_image.e19ac0c6b1009c7280f5.png",
-    "static/media/t-image1.png": "/apex-athletics/static/media/t-image1.c16c2c261034cf78ee57.png",
-    "static/media/image1.png": "/apex-athletics/static/media/image1.1091417d32e491f0bbb6.png",
-    "static/media/image2.png": "/apex-athletics/static/media/image2.82da8b2725df896d8a8e.png",
-    "static/media/t-image3.jpg": "/apex-athletics/static/media/t-image3.3894413f7bf2b4f1fc54.jpg",
-    "static/media/image3.png": "/apex-athletics/static/media/image3.69484cb0ee7687a8c28b.png",
-    "static/media/image4.png": "/apex-athletics/static/media/image4.2c0d30b9ce1579eb1109.png",
-    "static/media/t-image2.jpg": "/apex-athletics/static/media/t-image2.f5d2e52e514c544dfffb.jpg",
     "index.html": "/apex-athletics/index.html",
-    "main.090d976e.css.map": "/apex-athletics/static/css/main.090d976e.css.map",
-    "main.cc2912f5.js.map": "/apex-athletics/static/js/main.cc2912f5.js.map",
-    "902.81893d55.chunk.js.map": "/apex-athletics/static/js/902.81893d55.chunk.js.map",
-    "448.b1d86e21.chunk.js.map": "/apex-athletics/static/js/448.b1d86e21.chunk.js.map",
+    "main.c192ffef.css.map": "/apex-athletics/static/css/main.c192ffef.css.map",
+    "main.5f68caa7.js.map": "/apex-athletics/static/js/main.5f68caa7.js.map",
+    "902.b67f9654.chunk.js.map": "/apex-athletics/static/js/902.b67f9654.chunk.js.map",
+    "448.a1a5e511.chunk.js.map": "/apex-athletics/static/js/448.a1a5e511.chunk.js.map",
     "241.ac5f1cc2.chunk.js.map": "/apex-athletics/static/js/241.ac5f1cc2.chunk.js.map",
     "660.440600b0.chunk.js.map": "/apex-athletics/static/js/660.440600b0.chunk.js.map",
     "212.1f923042.chunk.js.map": "/apex-athletics/static/js/212.1f923042.chunk.js.map",
@@ -31,7 +24,7 @@
     "520.0bbb41be.chunk.js.map": "/apex-athletics/static/js/520.0bbb41be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.090d976e.css",
-    "static/js/main.cc2912f5.js"
+    "static/css/main.c192ffef.css",
+    "static/js/main.5f68caa7.js"
   ]
 }
