@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Header from "./Header";
-const heroImage = "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&h=1000&fit=crop";
 import heart from "../assets/heart.png";
 import calories from "../assets/calories.png";
+
+const heroImage = "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&h=1000&fit=crop";
 
 const stats = [
   { value: "140+", label: "Expert Coaches" },
